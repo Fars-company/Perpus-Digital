@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<style scope>
+<style scoped>
 #bebas{
   background-color: #273a48ab;
   padding-top: 5%;
@@ -22,6 +22,7 @@
 img {
   width:70%;
   padding: 10%;
+
 }
 h2{
   color: white;

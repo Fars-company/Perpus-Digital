@@ -3,7 +3,6 @@
     <Intro />
     <about />
     <visitor/>
-    <visit />
 
   </div>
 </template>

@@ -5,8 +5,8 @@
   </div>
 </template>
 <style>
-/* .container-fluid{
-  padding:0 !important;
-  margin: 0 !important;
-} */
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0;
+}
 </style>
