@@ -1,20 +1,16 @@
 <template>
-  <div class="row">
-    <div class="col">
-      <div class="visit">
+  <div class="visit">
     <h1>VISIT LIST</h1>
     <NuxtLink to="/" class="btn">Isi Daftar Pengunjung</NuxtLink>
-    <div class="row">
-      <div class="col">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Tanggal</th>
-              <th>Nama</th>
-              <th>Kategori</th>
-              <th>Keperluan</th>
-            </tr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Nama</th>
+            <th>Kategori</th>
+            <th>Keperluan</th>
+          </tr>
           </thead>
           <tbody>
             <tr v-for="(kunjungan, index) in visitors" :key="kunjungan.id">
@@ -24,14 +20,13 @@
               <td>{{ kunjungan.kategori }}</td>
               <td>{{ kunjungan.keperluan }}</td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-    </div>
-  </div>
+        </tbody>
+      </table>
+</div>
+
 </template>
+
+
 <script setup>
 const supabase = useSupabaseClient();
 const visitors = ref([]);
@@ -48,18 +43,20 @@ onMounted(() => getData());
 
 <style scoped>
 .visit{
-  background-color: #273a489a;
-  height: 600px;
+  background-color: #303e479a;
+  height: 5000px;
   width: 100%;
 }
 h1{
   text-align: center;
+  padding-top: 3%;
   color: white;
 }
 .btn{
   margin-top: 2%;
   width: 200px;
   height: 40px;
-  background-color: #99a9b3ad;
+  background-color:rgb(95, 101, 109);
+  color: white;
 }
 </style>

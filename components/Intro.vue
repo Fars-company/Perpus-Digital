@@ -1,14 +1,10 @@
 <template>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="intro">
-          <div class="layer">
-            <h1 class="text-center">WELCOME TO DIGITAL LIBRARY</h1>
-            <h3>SMKN 4 TASIKMALAYA</h3>
-          </div>
-        </div>
-      </div>
+  <div class="intro">
+    <div class="layer">
+      <h1 class="text-center">WELCOME TO DIGITAL LIBRARY</h1>
+      <h3>SMKN 4 TASIKMALAYA</h3>
     </div>
+  </div>
 </template>
 
 

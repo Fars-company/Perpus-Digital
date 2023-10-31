@@ -1,28 +1,24 @@
 <template>
-  <div class="row">
-    <div class="col">
-      <div class="visitor text-center">
-        <h1>VISITOR BOOK</h1>
-        <form class="py-3" @submit.prevent="addData" >
-          <div class="row-pt justify-content-center">
-            <div class="col-sm-10">
-                <input v-model="name" type="text" class="form-control form-control-lg" id="name" placeholder="Nama..." required>
-            </div>
-          </div>
-          <div class="row-pt">
-            <div class="col-sm-10">
-                <input v-model="kategori" type="text" class="form-control form-control-lg" id="kategori" placeholder="Kategori..." required>
-            </div>
-          </div>
-            <div class="row-pt">
-              <div class="col-sm-10">
-                  <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
-              </div>
-            </div>  
-            <button class="btn">Send Now</button>
-        </form>
+  <div class="visitor text-center">
+    <h1>VISITOR BOOK</h1>
+    <form class="py-3" @submit.prevent="addData" >
+      <div class="row-pt justify-content-center">
+        <div class="col-sm-10">
+            <input v-model="name" type="text" class="form-control form-control-lg" id="name" placeholder="Nama..." required>
+        </div>
       </div>
-    </div>
+      <div class="row-pt">
+        <div class="col-sm-10">
+            <input v-model="kategori" type="text" class="form-control form-control-lg" id="kategori" placeholder="Kategori..." required>
+        </div>
+      </div>
+        <div class="row-pt">
+          <div class="col-sm-10">
+              <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
+          </div>
+        </div>  
+        <button class="btn">Send Now</button>
+    </form>
   </div>
 </template>
 
@@ -51,7 +47,7 @@ async function addData(){
 
 
 <style scoped>
-.row{
+.visitor{
   background-color: #B4C4DB;
   height: 600px;
 }
@@ -68,6 +64,6 @@ async function addData(){
 } 
 h1{
   text-align: center;
-  margin-top:  5%;
+  padding-top: 5%;
 }
 </style>
