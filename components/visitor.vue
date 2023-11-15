@@ -1,24 +1,26 @@
 <template>
   <div class="visitor text-center">
     <h1>VISITOR BOOK</h1>
-    <form class="py-3" @submit.prevent="addData" >
-      <div class="row-pt justify-content-center">
-        <div class="col-sm-10">
-            <input v-model="name" type="text" class="form-control form-control-lg" id="name" placeholder="Nama..." required>
+    <div class="layer">
+      <form class="py-3" @submit.prevent="addData" >
+        <div class="row-pt justify-content-center">
+          <div class="col-sm-10">
+              <input v-model="name" type="text" class="form-control form-control-lg" id="name" placeholder="Nama..." required>
+          </div>
         </div>
-      </div>
-      <div class="row-pt">
-        <div class="col-sm-10">
-            <input v-model="kategori" type="text" class="form-control form-control-lg" id="kategori" placeholder="Kategori..." required>
-        </div>
-      </div>
         <div class="row-pt">
           <div class="col-sm-10">
-              <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
+              <input v-model="kategori" type="text" class="form-control form-control-lg" id="kategori" placeholder="Kategori..." required>
           </div>
-        </div>  
-        <button class="btn">Send Now</button>
-    </form>
+        </div>
+          <div class="row-pt">
+            <div class="col-sm-10">
+                <input v-model="keperluan" type="text" class="form-control form-control-lg" id="keperluan" placeholder="Keperluan..." required>
+            </div>
+          </div>  
+          <button class="btn">Send Now</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -32,6 +34,7 @@ const keperluan=ref('');
 async function addData(){
   const {error}=await supabase
   .from ("kunjungan")
+  
   .insert([
     {
     nama : name.value,
@@ -48,7 +51,7 @@ async function addData(){
 
 <style scoped>
 .visitor{
-  background-color: #B4C4DB;
+  background-color: #ffffff;
   height: 600px;
 }
 .row-pt{
@@ -60,10 +63,12 @@ async function addData(){
   margin-top: 2%;
   width: 100px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: rgb(31, 86, 206);
+  color: #ffffff;
+  margin-right: 52%;
 } 
 h1{
   text-align: center;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 </style>

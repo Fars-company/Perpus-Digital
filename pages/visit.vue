@@ -1,9 +1,10 @@
 <template>
   <div class="visit">
-    <h1>VISIT LIST</h1>
+    <h1>RIWAYAT KUNJUNGAN</h1>
     <NuxtLink to="/" class="btn">Isi Daftar Pengunjung</NuxtLink>
+    <div class="m-2">Menampilkan {{ visitors.length }} data</div>
       <table class="table">
-        <thead>
+        <thead class="table-primary table-bordered">
           <tr>
             <th>No</th>
             <th>Tanggal</th>
@@ -12,7 +13,7 @@
             <th>Keperluan</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody class="table-bordered">
             <tr v-for="(kunjungan, index) in visitors" :key="kunjungan.id">
               <td>{{ index + 1 }}</td>
               <td>{{ kunjungan.tanggal }}</td>
@@ -31,10 +32,12 @@
 const supabase = useSupabaseClient();
 const visitors = ref([]);
 
+
 async function getData() {
   const { data, error } = await supabase
   .from("kunjungan")
-  .select();
+  .select()
+  .order('tanggal',{ascending: false })
   if (data) visitors.value = data;
 }
 
@@ -42,21 +45,25 @@ onMounted(() => getData());
 </script>
 
 <style scoped>
+.table-bordered{
+  width: 96%;
+  margin-left: 2%;
+  text-align: center;
+}
 .visit{
-  background-color: #303e479a;
-  height: 5000px;
+  background-color: #ffffff;
   width: 100%;
 }
 h1{
   text-align: center;
   padding-top: 3%;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .btn{
-  margin-top: 2%;
+  margin: 2%;
   width: 200px;
   height: 40px;
-  background-color:rgb(95, 101, 109);
+  background-color: rgb(31, 86, 206);
   color: white;
 }
 </style>

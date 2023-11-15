@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-secondary">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="~/assets/img/logo.png" alt=""></a>
-      <h1>DIGITAL LIBRARY</h1>
+      <h1>PERPUSTAKAAN DIGITAL</h1>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,6 +19,12 @@
 </script>
 
 <style scoped>
+h1{
+  color: white;
+}
+.navbar{
+  background-color: rgb(31, 86, 206);
+}
 img {
   width: 100px;
   padding-left: 20%;

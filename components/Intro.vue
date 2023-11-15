@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <div class="layer">
-      <h1 class="text-center">WELCOME TO DIGITAL LIBRARY</h1>
+      <h1 class="text-center">SELAMAT DATANG DI PERPUSTAKAAN DIGITAL</h1>
       <h3>SMKN 4 TASIKMALAYA</h3>
     </div>
   </div>
@@ -28,7 +28,7 @@
 .intro .layer {
   width: 100%;
   height: 600px;
-  background-color: #98a9bd;
+  background-color: #ffffff;
   opacity: 0.8;
   z-index: -1;
 }
