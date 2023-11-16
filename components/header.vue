@@ -7,8 +7,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav justify-content-flex-end">
-          <NuxtLink class="nav-link" to="/visit">VISIT</NuxtLink>
+        <div class="navbar-nav ms-auto">
+          <NuxtLink class="nav-link" to="/">HOME</NuxtLink>
+          <NuxtLink class="nav-link" to="/visit">RIWAYAT KUNJUNGAN</NuxtLink>
         </div>
       </div>
     </div>
@@ -19,7 +20,17 @@
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,500&family=Playpen+Sans:wght@700&display=swap');
+.nav-link{
+  color: white;
+  font-size: 80%;
+  padding-left: 3%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
+}
 h1{
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
   color: white;
 }
 .navbar{

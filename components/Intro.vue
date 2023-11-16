@@ -9,6 +9,7 @@
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,500&family=Playpen+Sans:wght@700&display=swap');
 .intro {
   width: 100%;
   height: 600px;
@@ -19,6 +20,8 @@
 
 .intro .text-center {
   padding-top: 20%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 
 .intro .inner-intro {
@@ -35,5 +38,7 @@
 
 h3 {
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 </style>

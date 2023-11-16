@@ -1,7 +1,7 @@
 <template>
   <div class="visit">
     <h1>RIWAYAT KUNJUNGAN</h1>
-    <NuxtLink to="/" class="btn">Isi Daftar Pengunjung</NuxtLink>
+    <NuxtLink to="/" class="btn">Isi kunjungan</NuxtLink>
     <div class="m-2">Menampilkan {{ visitors.length }} data</div>
       <table class="table">
         <thead class="table-primary table-bordered">
@@ -45,19 +45,26 @@ onMounted(() => getData());
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,500&family=Playpen+Sans:wght@700&display=swap');
 .table-bordered{
   width: 96%;
   margin-left: 2%;
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 .visit{
   background-color: #ffffff;
   width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 h1{
   text-align: center;
   padding-top: 3%;
   color: rgb(0, 0, 0);
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 .btn{
   margin: 2%;
@@ -65,5 +72,7 @@ h1{
   height: 40px;
   background-color: rgb(31, 86, 206);
   color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playpen Sans', cursive;
 }
 </style>
