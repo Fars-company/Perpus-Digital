@@ -1,9 +1,9 @@
 <template>
   <div class="intro">
-    <div class="layer">
+    <marquee scrollamount="20" class="layer">
       <h1 class="text-center">SELAMAT DATANG DI PERPUSTAKAAN DIGITAL</h1>
       <h3>SMKN 4 TASIKMALAYA</h3>
-    </div>
+    </marquee>
   </div>
 </template>
 
@@ -13,7 +13,6 @@
 .intro {
   width: 100%;
   height: 600px;
-  display: table;
   background: transparent url("@/assets/img/foto.png") no-repeat center center;
   background-size: cover;
 }
@@ -30,7 +29,7 @@
 
 .intro .layer {
   width: 100%;
-  height: 600px;
+  height: 620px;
   background-color: #ffffff;
   opacity: 0.8;
   z-index: -1;

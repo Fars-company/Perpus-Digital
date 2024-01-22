@@ -50,13 +50,22 @@
         </div>
         <div class="row m-3 justify-content-center">
           <div class="col-sm-10">
-            <input v-model="keperluan" class="form-control" type="text" placeholder="Keperluan ..." aria-label="Keperluan ..." />
+            <select v-model="keperluan" class="form-control mb-3">
+              <option disabled value="">Keperluan ...</option>
+              <option>Membaca</option>
+              <option>Meminjam Buku</option>
+              <option>Berkunjung</option>
+              <option>Mengembalikan Buku</option>
+              <option>Lainnya</option>
+            </select>
+            <input v-if="keperluan == 'Lainnya'" v-model="keperluanLain" class="form-control" type="text" placeholder="Keperluan...">
           </div>
         </div>
-        <button class="btn">Kirim</button>
+        <input type="submit" class="btn" :disabled="isDisabled" value="Kirim">
       </form>
     </div>
   </div>
+  <div class="loader"></div>
 </template>
 
 <script setup>
@@ -64,24 +73,30 @@ const supabase = useSupabaseClient();
 const name = ref("");
 const kategori = ref("");
 const keperluan = ref("");
+const keperluanLain = ref("");
 const tingkat = ref("");
 const jurusan = ref("");
 const kelas = ref("");
-const darikelas = ref("");
+const dariKelas = ref("");
 
 async function addData() {
-  darikelas.value = `${tingkat.value} ${jurusan.value} ${kelas.value}`;
+  dariKelas.value = `${tingkat.value} ${jurusan.value} ${kelas.value}`;
   const { error } = await supabase.from("kunjungan").insert([
     {
       nama: name.value,
       kategori: kategori.value,
-      kelas: darikelas.value,
-      keperluan: keperluan.value,
+      kelas: dariKelas.value,
+      keperluan: keperluan.value == 'Lainnya' ? keperluanLain.value : keperluan.value,
     },
   ]);
   if (error) throw error;
   else navigateTo("/visit");
 }
+
+const isDisabled = computed(() => {
+  return !name.value || !kategori.value || !keperluan.value
+})
+
 </script>
 
 <style scoped>
@@ -90,14 +105,14 @@ async function addData() {
   background-color: #ffffff;
   height: 600px;
 }
-.row{
-  width: 90%;
+.row {
+  width: 80%;
   padding-top: 2%;
+  padding-left: 20%;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Playpen Sans", cursive;
 }
 .btn {
-  margin-top: 2%;
   width: 80px;
   height: 40px;
   background-color: rgb(31, 86, 206);

@@ -1,8 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex flex-direction-row align-items-center" href="#"><img src="~/assets/img/logo.png" alt="" />
-      <h1>PERPUS DIGITAL</h1></a>
+      <a class="navbar-brand d-flex flex-direction-row align-items-center" href="#"
+        ><img src="~/assets/img/logo.png" alt="" />
+        <h1>PERPUS DIGITAL</h1></a
+      >
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,9 +42,6 @@ h1 {
 img {
   width: 100px;
   margin-left: 5%;
-}
-.navbar-toggler-icon{
-  color: white;
 }
 /* 
 @media (max-width=400px) {
