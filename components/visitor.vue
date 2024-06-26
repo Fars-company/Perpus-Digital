@@ -12,10 +12,10 @@
           <div class="col-sm-10">
             <select v-model="kategori" class="form-control">
               <option disabled value="">Kategori ...</option>
-              <option>Siswa</option>
-              <option>Guru</option>
-              <option>Staf</option>
-              <option>Umum</option>
+              <option value="siswa">Siswa</option>
+              <option value="guru">Guru</option>
+              <option value="staf">Staf</option>
+              <option value="umum">Umum</option>
             </select>
           </div>
         </div>
